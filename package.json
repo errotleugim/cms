@@ -1,0 +1,27 @@
+{
+  "name": "cms",
+  "version": "1.0.0",
+  "description": "Content Management System",
+  "main": "index.js",
+  "scripts": {
+    "test": "n/a"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/errotleugim/cms.git"
+  },
+  "keywords": [
+    "mysql",
+    "node",
+    "inquirer"
+  ],
+  "author": "MAT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/errotleugim/cms/issues"
+  },
+  "homepage": "https://github.com/errotleugim/cms#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
+}
