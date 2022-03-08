@@ -8,7 +8,7 @@ const connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
-    password: "PASSWORDHERE",
+    password: "hails8n",
     database: "cmsDB",
 });
 
@@ -235,7 +235,7 @@ function addEmployee() {
             validate: function (value) {
                 let valid = !isNaN(value);
                 return valid || "Please enter a number";
-            },s
+            },
         },
     ])
     .then((answer) => {
