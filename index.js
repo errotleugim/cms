@@ -21,7 +21,7 @@ connection.connect(function (err) {
         return;
     }
 
-    console.log("connected as id " + connection.threadId);
+    console.log("connected ID: " + connection.threadId);
 
     initCMS();
 });
@@ -113,7 +113,7 @@ function initCMS() {
             }
         });
 }
-
+//working
 function viewAll() {
     inquirer
         .prompt({
@@ -226,11 +226,19 @@ function addEmployee() {
             name: "roleId",
             type: "input",
             message: "What is this employee's role ID?",
+            validate: function (value) {
+                let valid = !isNaN(value);
+                return valid || "Please enter a number";
+            },
         },
         {
             name: "managerId",
             type: "input",
             message: "What is this employee's manager ID?",
+            validate: function (value) {
+                let valid = !isNaN(value);
+                return valid || "Please enter a number";
+            },s
         },
     ])
     .then((answer) => {
@@ -271,6 +279,10 @@ function addRole(){
             name: "department_id",
             type: "input",
             message: "What is this role's department ID?",
+            validate: function (value) {
+                let valid = !isNaN(value);
+                return valid || "Please enter a number";
+            },
         },
         ])
         .then((answer) => {
@@ -336,7 +348,7 @@ function deleteDepartment() {
             initCMS();
         });
 };
-//
+//working
 function deleteEmployee() {
     displayAllEmployees();
 
@@ -362,7 +374,7 @@ function deleteEmployee() {
             initCMS();
         });
 };
-//
+//working
 function deleteRole(){
 
      displayAllRoles();
@@ -399,12 +411,9 @@ function deleteRole(){
                  ],
                  function (err, res) {
                      if (err) throw err;
-                     console.log(
-                         "Role is now = 0"
-                     );
+                     console.log("Role is now = 0");
                  }
              );
- 
              initCMS();
          });
 };
