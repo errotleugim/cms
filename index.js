@@ -1,9 +1,6 @@
 const mysql = require("mysql");
 const inquirer = require("inquirer");
 // const express = require("express");
-// // module.import { viewAll, displayAllDepartments, displayAllRoles, addDepartment, addEmployee, addRole, deleteDepartment, deleteEmployee, deleteRole } from 'operations.js'
-
-
 // const app = express();
 // const PORT = 3301;
 
@@ -417,5 +414,6 @@ function deleteRole(){
              initCMS();
          });
 };
-
+//Forgot to write update function
+// function updateRole();
 //  initCMS();
