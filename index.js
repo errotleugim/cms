@@ -8,7 +8,7 @@ const connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
-    password: "hails8n",
+    password: "PASSWORDHERE",
     database: "cmsDB",
 });
 
@@ -415,5 +415,46 @@ function deleteRole(){
          });
 };
 //Forgot to write update function
-// function updateRole();
+function updateRole(){
+    let employeeId;
+
+    displayAllEmployees();
+    inquirer
+    .prompt({
+        name: "employeeId",
+        type: "input",
+        message: "Enter the ID of the employee you want to update",
+    })
+    .then((answer) => {
+        employeeId = answer.employeeId;
+
+        displayAllRoles();
+
+        inquirer
+            .prompt({
+                name: "roleId",
+                type: "input",
+                message: "What is the updated Role Id?",
+            })
+            .then((answer) => {
+
+                connection.query(
+                    "UPDATE employee SET ? WHERE ?",
+                    [
+                        {
+                            role_id: answer.roleId,
+                        },
+                        {
+                            id: employeeId,
+                        },
+                    ],
+                    function (err, res) {
+                        if (err) throw err;
+                        initCMS();
+                    }
+                );
+            });
+    });
+}
+
 //  initCMS();
