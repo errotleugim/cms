@@ -14,6 +14,7 @@
 
 ## Description
 This is a nodejs application to keep track of employees in an organization with various departents and positions 
+![Walkthrough](https://github.com/errotleugim/cms/blob/master/walkthru.mp4?raw=true)
 
 ## Installation
 run npm install upon downloading
