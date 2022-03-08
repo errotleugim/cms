@@ -26,7 +26,7 @@ connection.connect(function (err) {
     initCMS();
 });
 
-
+//working
 function initCMS() {
     inquirer
         .prompt({
@@ -156,9 +156,9 @@ function viewAll() {
             initCMS();
         });
 }
-
+//working
 function displayAllDepartments(){
-    let query = "SELECT * FROM departments ";
+    let query = "SELECT * FROM department ";
     connection.query(query, (err, res) => {
         if (err) throw err;
 
@@ -166,6 +166,7 @@ function displayAllDepartments(){
         console.table(res);
     });
 };
+//working
 function displayAllRoles(){
     let query = "SELECT * FROM roles ";
     connection.query(query, (err, res) => {
@@ -175,7 +176,7 @@ function displayAllRoles(){
         console.table(res);
     });
 };
-
+//working
 function displayAllEmployees(){
     let query = "SELECT * FROM employee ";
     connection.query(query, (err, res) => {
@@ -185,6 +186,7 @@ function displayAllEmployees(){
         console.table(res);
     });
 };
+//working
 function addDepartment(){
     inquirer
         .prompt({
@@ -206,6 +208,7 @@ function addDepartment(){
             );
         });
 };
+//working
 function addEmployee() {
     inquirer
     .prompt([
@@ -247,6 +250,7 @@ function addEmployee() {
         );
     });
 };
+//working
 function addRole(){
     inquirer
         .prompt([{
@@ -287,6 +291,7 @@ function addRole(){
             );
         });
 };
+//working
 function deleteDepartment() {
     displayAllDepartments();
 
@@ -331,6 +336,7 @@ function deleteDepartment() {
             initCMS();
         });
 };
+//
 function deleteEmployee() {
     displayAllEmployees();
 
@@ -356,7 +362,7 @@ function deleteEmployee() {
             initCMS();
         });
 };
-
+//
 function deleteRole(){
 
      displayAllRoles();
@@ -401,7 +407,6 @@ function deleteRole(){
  
              initCMS();
          });
- };
+};
 
-
- initCMS();
+//  initCMS();
